@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Montserrat } from 'next/font/google';
-import { Navbar } from "@/components/Layout/Navbar/Navbar";
-import { Footer } from "@/components/Layout/Footer/Footer";
+import { Montserrat } from "next/font/google";
+import ClientWrapper from "@/utils/ClientWrapper";
 
 export const metadata: Metadata = {
   title: "Imosu Autoparts",
@@ -10,24 +9,20 @@ export const metadata: Metadata = {
 };
 
 const montserrat = Montserrat({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'], 
-  variable: '--font-montserrat', 
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-montserrat",
 });
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={montserrat.className}
-      >
-        <Navbar />
-        {children}
-        <Footer />
+      <body className={montserrat.className}>
+        <ClientWrapper>{children}</ClientWrapper>
       </body>
     </html>
   );

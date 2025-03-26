@@ -8,9 +8,9 @@ type SocmedProductsType = {
 }
 
 const SocmedProductsItem: SocmedProductsType[] = [
-      {icon: <MdOutlineWhatsapp color="#FFFFFF" size={30} />, alt: 'whatsapp'},
-      {icon: <FiFacebook color="#FFFFFF" size={30} />, alt: 'facebook'},
-      {icon: <FaInstagram color="#FFFFFF" size={30} />, alt: 'instagram'},
+      {icon: <MdOutlineWhatsapp color="#FFFFFF" size={30} className="w-6 h-6 md:w-[30px] md:h-[30px]" />, alt: 'whatsapp'},
+      {icon: <FiFacebook color="#FFFFFF" size={30} className="w-6 h-6 md:w-[30px] md:h-[30px]" />, alt: 'facebook'},
+      {icon: <FaInstagram color="#FFFFFF" size={30} className="w-6 h-6 md:w-[30px] md:h-[30px]" />, alt: 'instagram'},
 ]
 export function ProductDetailShare() {
       return (

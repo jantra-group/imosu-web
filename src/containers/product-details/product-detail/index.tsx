@@ -4,10 +4,10 @@ import { ProductDetailInfo } from "@/components/Product/ProductDetails/ProductDe
 
 export function ProductDetailSection() {
       return (
-            <section className="flex flex-col lg:gap-16">
-                  <div className="flex flex-col lg:flex-row gap-16">
+            <section className="flex flex-col gap-5 lg:gap-16">
+                  <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
                         <ProductDetailImage />
-                        <ProductDetailInfo />
+                        <ProductDetailInfo showCart={false} addMargin={true} />
                   </div>
                   <ProductDetailDescription />
             </section>

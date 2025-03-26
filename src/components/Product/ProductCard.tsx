@@ -12,8 +12,8 @@ export function ProductCard() {
                               <Image src="/image/home/card/product-dummy.svg" alt="product-dummy" width={227} height={227} className="w-full h-full" />
                         </div>
 
-                        <div className="flex flex-col px-5 pt-3 pb-10 gap-1">
-                              <h6 className="font-bold text-base text-black">Bushing Arm</h6>
+                        <div className="flex flex-col px-3 md:px-5 pt-3 pb-10 gap-1">
+                              <h6 className="font-bold text-sm md:text-base text-black">Bushing Arm</h6>
                               <p className="text-xs text-black max-w-[200px]"> Nissan New Xtrail / New Serena / Juke / Livina / Evalia / Latio</p>
                               <p className="font-extrabold text-sm text-primary-500">Rp10.000</p>
 

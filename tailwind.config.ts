@@ -11,14 +11,18 @@ export default {
   theme: {
   	extend: {
   		boxShadow: {
-  			'custom-dark': '0 4px 8px -5px rgba(0, 0, 0, 0.15)'
+  			'custom-dark': '0 4px 8px -5px rgba(0, 0, 0, 0.15)',
+  			'custom-neutral': '4px 4px 20px rgba(203, 202, 202, 0.25)'
   		},
   		fontFamily: {
   			montserrat: [
   				'var(--font-montserrat)',
   				'sans-serif'
   			],
-			robotoCondensed: ['"Roboto Condensed"', 'sans-serif'],
+  			robotoCondensed: [
+  				'Roboto Condensed"',
+  				'sans-serif'
+  			]
   		},
   		colors: {
   			primary: {

@@ -25,13 +25,13 @@ export function Bear() {
                         </div>
 
                         {/* right hand */}
-                        <div className="absolute right-0 -rotate-90 w-[36px] h-[90px] bg-primary-500 border border-neutral-800 rounded-full top-10 z-50 
+                        {/* <div className="absolute right-0 -rotate-90 w-[36px] h-[90px] bg-primary-500 border border-neutral-800 rounded-full top-10 z-50 
             transition-all duration-500 group-focus:right-[80px]">
                               <div className="relative">
                                     <div className="w-[1px] h-[20px] absolute bg-neutral-800 left-3 top-0"></div>
                                     <div className="w-[1px] h-[20px] absolute bg-neutral-800 right-3 top-0"></div>
                               </div>
-                        </div>
+                        </div> */}
 
                   </div>
             </div>

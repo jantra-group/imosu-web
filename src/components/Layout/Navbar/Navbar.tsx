@@ -29,7 +29,7 @@ export function Navbar() {
                   <div className="flex justify-between items-center">
                         {/* Logo */}
                         <Link href="/" passHref>
-                              <Image src="/image/imosu.svg" alt="imosu-logo" width={146} height={45} />
+                              <Image src="/image/imosu.svg" alt="imosu-logo" width={146} height={45} className="w-[120px] md:w-[146px]" />
                         </Link>
 
                         {/* Mobile Menu & Cart Button */}
@@ -69,6 +69,7 @@ export function Navbar() {
                                           className="text-lg font-medium text-black hover:text-primary-500 transition-colors"
                                           href={item.href}
                                           key={item.label}
+                                          onClick={() => setIsOpen(false)}
                                     >
                                           {item.label}
                                     </Link>

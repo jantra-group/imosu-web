@@ -1,0 +1,63 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Product {
+  no           Int      @id @default(autoincrement())
+  name_product   String
+  image_product Json?
+  price_product  Int
+  stock_quantity Int
+  description    String?
+  sku            String  @unique
+  car_brand      String?
+  car_type       String?
+  id_trademark   String?
+  id_category    String?
+}
+
+model CarType {
+  id_car_type Int        @id @default(autoincrement())
+  type_car    String
+  CarBrand    CarBrand[]
+}
+
+model CarBrand {
+  id_car      Int     @id @default(autoincrement())
+  name_car    String
+  id_car_type Int
+  carType     CarType @relation(fields: [id_car_type], references: [id_car_type])
+}
+
+model Trademark {
+  id_trademark   Int    @id @default(autoincrement())
+  name_trademark String
+}
+
+model ProductCategory {
+  id_category   Int    @id @default(autoincrement())
+  name_category String
+}
+
+model Cart {
+  id_cart       Int      @id @default(autoincrement())
+  name_product  String
+  price         Int
+  total_price   Int
+  order_date    DateTime
+  image_product Bytes
+  quantity      Int
+  id_product    Int
+}
+
+model Admin {
+  email    String @id
+  password Bytes
+  username String
+}

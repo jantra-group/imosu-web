@@ -11,7 +11,7 @@ export function FilterProduct() {
       };
 
       return (
-            <div className="flex flex-col gap-8 w-full max-w-[200px]">
+            <div className="flex flex-row lg:flex-col gap-8 w-full lg:max-w-[200px]">
                   <div className="flex flex-col gap-3 justify-start">
                         <p className="text-lg font-semibold text-black">Kategori</p>
                         <label className="flex gap-3 text-sm text-black">
@@ -62,7 +62,7 @@ export function FilterProduct() {
                         <p className="mt-4 text-sm">
                               Price: Rp{price[0].toLocaleString()} - Rp{price[1].toLocaleString()}
                         </p>
-            </div>
+                  </div>
             </div>
       )
 }

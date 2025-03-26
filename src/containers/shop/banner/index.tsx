@@ -10,13 +10,12 @@ const slides = Array(6).fill("/image/shop/banner-dummy.svg");
 
 export function BannerProduct() {
       return (
-            <div className="bg-neutral-300 px-20 py-10">
-                  <div className=" w-full max-w-[1440px] mx-auto">
+            <div className="bg-neutral-300 px-5 py-6 lg:px-20 lg:py-10">
+                  <div className="w-full max-w-[1440px] mx-auto">
                         <Swiper
                               modules={[Autoplay, EffectCoverflow]}
                               spaceBetween={100}
                               loop={true}
-                              slidesPerView={1.5}
                               centeredSlides={true}
                               autoplay={{ delay: 5000, disableOnInteraction: false }}
                               effect="coverflow"
@@ -27,6 +26,10 @@ export function BannerProduct() {
                                     modifier: 2,
                                     slideShadows: false,
                               }}
+                              breakpoints={{
+                                    768: { slidesPerView: 1.5 },
+                              }}
+                              slidesPerView={1} // Default
                         >
                               {slides.map((src, index) => (
                                     <SwiperSlide key={index} className="transition-all duration-300">

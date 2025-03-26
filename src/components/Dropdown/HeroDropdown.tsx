@@ -4,11 +4,12 @@ import { useState } from "react";
 
 interface HeroDropdownProps {
       placeholder: string;
+      stylingCustom?: string;
       options: string[];
       onChange?: (value: string) => void;
 }
 
-export function HeroDropdown({ placeholder, options, onChange }: HeroDropdownProps) {
+export function HeroDropdown({ placeholder, options, stylingCustom, onChange }: HeroDropdownProps) {
       const [isOpen, setIsOpen] = useState(false);
       const [selected, setSelected] = useState<string | null>(null);
 
@@ -23,7 +24,7 @@ export function HeroDropdown({ placeholder, options, onChange }: HeroDropdownPro
       return (
             <div ref={dropdownRef} className="relative w-full sm:w-64">
                   <div
-                        className="bg-[#EDEBEB] rounded-lg px-6 py-2.5 shadow-lg cursor-pointer flex justify-between items-center"
+                        className={`${stylingCustom} bg-[#EDEBEB] rounded-lg px-6 py-2.5 shadow-lg cursor-pointer flex justify-between items-center`}
                         onClick={() => setIsOpen(!isOpen)}
                   >
                         <span className={`text-sm ${selected ? "text-black" : "text-[#6E6E6E]"}`}>

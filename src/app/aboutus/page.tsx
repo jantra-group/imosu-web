@@ -9,7 +9,7 @@ export default function AboutUsPage() {
       return (
             <main>
                   <Image src="/image/aboutus/background.svg" alt="background-aboutus" width={1200} height={272} className="w-full h-[272px] object-cover" />
-                  <section className="flex flex-col w-full max-w-[1440px] mx-auto px-20 py-16 gap-20">
+                  <section className="flex flex-col w-full max-w-[1440px] mx-auto px-5 lg:px-20 py-10 lg:py-16 gap-10 lg:gap-20">
                         <BrandSection />
                         <VisiMisiSection />
                         <CoverageSection />

@@ -1,10 +1,10 @@
 export function ProductDetailDescription() {
       return (
             <div className="flex flex-col gap-5">
-                  <h3 className="text-black text-[28px] font-extrabold bg-neutral-300 px-4 py-2">Description</h3>
+                  <h3 className="text-black text-2xl md:text-[28px] font-extrabold bg-neutral-300 px-4 py-2">Description</h3>
 
                   {/* Deskripsi */}
-                  <p>
+                  <p className="text-sm md:text-base">
                         Lorem ipsum dolor sit amet consectetur.
                         Porttitor tincidunt viverra pharetra quisque lorem at imperdiet rhoncus. Enim quis nunc tristique volutpat integer sodales eros. Magna orci id quis amet a consequat. Feugiat vitae non sed condimentum condimentum ac cursus fermentum. Aliquam odio arcu ac amet viverra. In quam ultrices nibh et. Elementum nibh rhoncus pellentesque ac varius tincidunt metus. Maecenas auctor tellus ut erat scelerisque porta. Ac aliquam egestas suspendisse faucibus gravida et tempus id. Sed leo amet orci cursus mi. Nibh purus ut sed faucibus id.
 

@@ -5,7 +5,7 @@ interface ProductListProps {
 }
 export function ProductList({grid}: ProductListProps) {
       return (
-            <div className={`grid ${grid} gap-10`}>
+            <div className={`grid ${grid} gap-5 lg:gap-10`}>
                   <ProductCard />
                   <ProductCard />
                   <ProductCard />

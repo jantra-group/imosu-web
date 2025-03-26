@@ -16,7 +16,7 @@ export function NavCartButton() {
                   </button>
 
                   {isPopUpVisible && (
-                        <PopupCart />
+                        <PopupCart onClose={() => setIsPopUpVisible(false)} />
                   )}
             </>
       )
