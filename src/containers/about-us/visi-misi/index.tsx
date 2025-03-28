@@ -26,7 +26,7 @@ const VisionMissionCard: React.FC<VisionMissionCardProps> = ({ title, descriptio
                         )}
                   </div>
                   <div className="absolute bottom-0 right-0 overflow-hidden">
-                        <Image src={imageSrc} alt={title} width={title === "VISI" ? 200 : 160} height={title === "VISI" ? 200 : 160} className="w-fit h-fit" />
+                        <Image src={imageSrc} alt={title} width={title === "VISI" ? 200 : 160} height={title === "VISI" ? 200 : 160} className="w-fit h-fit opacity-80" />
                   </div>
             </div>
       );
