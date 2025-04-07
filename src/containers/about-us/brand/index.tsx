@@ -43,7 +43,7 @@ export function BrandSection() {
 
                   {brandsData.map((brand, index) => (
                         <div key={index} className="flex flex-col gap-16">
-                              <div className={`flex flex-col lg:flex-row gap-8 ${brand.reverse ? 'lg:flex-row-reverse' : ''}`}>
+                              <div className={`flex flex-col lg:flex-row gap-8 justify-between ${brand.reverse ? 'lg:flex-row-reverse' : ''}`}>
                                     <div className="flex flex-row gap-8 overflow-x-auto lg:overflow-clip">
                                           {brand.images.map((image, idx) => (
                                                 <Image key={idx} src={image} alt={`${brand.name}-${idx + 1}`} width={270} height={270} className="w-full lg:w-[270px] rounded-xl" />
