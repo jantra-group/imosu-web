@@ -22,17 +22,10 @@ model Product {
   id_category    String?
 }
 
-model CarType {
-  id_car_type Int        @id @default(autoincrement())
-  type_car    String
-  CarBrand    CarBrand[]
-}
-
-model CarBrand {
+model Car {
   id_car      Int     @id @default(autoincrement())
-  name_car    String
-  id_car_type Int
-  carType     CarType @relation(fields: [id_car_type], references: [id_car_type])
+  car_brand   String
+  car_type    String
 }
 
 model Trademark {

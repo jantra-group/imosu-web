@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     };
     return config;
   },
+  allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
   images: {
     domains: [
       'scontent.cdninstagram.com',
@@ -18,6 +19,7 @@ const nextConfig: NextConfig = {
       'scontent-bom1-2.cdninstagram.com',
       'scontent-bom2-1.cdninstagram.com',
       'scontent-bom2-4.cdninstagram.com',
+      'scontent-bom2-2.cdninstagram.com',
       'scontent-bom4-2.cdninstagram.com',
       'mdtswauykfhfprscrcld.supabase.co',
     ],

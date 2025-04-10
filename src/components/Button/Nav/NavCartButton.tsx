@@ -11,10 +11,12 @@ export function NavCartButton() {
       }
       return (
             <>
-                  <button onClick={handleClick}>
+                  <button onClick={handleClick} className="relative px-1 py-1">
                         <AiOutlineShoppingCart size={28} color="#000000" />
+                        <div className="absolute flex items-center justify-center text-[10px] text-white top-0 right-0 rounded-full w-3.5 h-3.5 bg-primary-500">
+                              1
+                        </div>
                   </button>
-
                   {isPopUpVisible && (
                         <PopupCart onClose={() => setIsPopUpVisible(false)} />
                   )}

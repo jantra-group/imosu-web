@@ -10,7 +10,7 @@ function generateAccurateHeaders(signatureSecret: string) {
             .digest('base64');
 
       console.log("X-Api-Timestamp", timestamp),
-            console.log("X-Api-Signature", signature)
+      console.log("X-Api-Signature", signature)
       return {
             'X-Api-Timestamp': timestamp,
             'X-Api-Signature': signature,

@@ -9,6 +9,7 @@ import { HiOutlineLogout } from "react-icons/hi";
 import Image from "next/image";
 import Link from "next/link";
 import { LogoutPopup } from "../Popup/LogoutPopup";
+import { BiCategoryAlt } from "react-icons/bi";
 
 interface SidebarItemProps {
       icon: React.ReactNode;
@@ -30,6 +31,7 @@ export function SidebarAdmin() {
       const sidebarItems: SidebarItemProps[] = [
             { icon: <FaHome size={25} />, label: "Dashboard", href: "/dashboard" },
             { icon: <GiFlatTire size={25} />, label: "Products", href: "/dashboard/products", matchPaths: ["/dashboard/products/"] },
+            { icon: <BiCategoryAlt size={25} />, label: "Kategori", href: "/dashboard/category", matchPaths: ["/dashboard/category/"] },
             { icon: <FaCarAlt size={25} />, label: "Car Brand", href: "/dashboard/car-brand" },
             {
                   icon: <HiOutlineLogout size={25} />,

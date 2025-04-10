@@ -15,7 +15,7 @@ export async function createProductInSupabase(productDataArray: any): Promise<an
                 name_product: productData?.name || "Nama Produk Default",
                 sku: productData?.no || "SKU Default",
                 stock_quantity: productData?.quantity || 0,
-                image_product: productData?.image_product[0] ?? "",
+                image_product: productData?.image_product ?? null,
                 price_product: 0, // Nilai default, sesuaikan jika perlu
                 description: productData?.description || null, // Menggunakan null sebagai default
                 car_brand: productData?.car_brand || null, // Menggunakan null sebagai default

@@ -4,10 +4,10 @@ import { CgNotes } from "react-icons/cg";
 export default function Dashboard() {
       const columns = [
             { key: "no", label: "No" },
-            { key: "sku", label: "SKU" },
-            { key: "productName", label: "Nama Produk" },
-            { key: "carType", label: "Tipe Mobil" },
-            { key: "price", label: "Harga" },
+            { key: "transactionNumber", label: "Nomor Transaksi" },
+            { key: "total", label: "Total" },
+            // { key: "carType", label: "Tipe Mobil" },
+            // { key: "price", label: "Harga" },
             { key: "action", label: "Action" },
       ];
 

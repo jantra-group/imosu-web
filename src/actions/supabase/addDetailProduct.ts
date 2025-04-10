@@ -3,8 +3,14 @@ import { fetchProductDetailFromAccurate } from "../accurate/getDetailProduct";
 
 const prisma = new PrismaClient();
 
-function formatPrice(price: number): number {
-    return price / 100;
+function formatPrice(price: number): string {
+    const formattedPrice = new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
+    }).format(price);
+    return formattedPrice;
 }
 
 export async function updateProductsWithAccurateDetails(): Promise<any> {
@@ -15,10 +21,13 @@ export async function updateProductsWithAccurateDetails(): Promise<any> {
             const accurateDetail = await fetchProductDetailFromAccurate(product.sku);
 
             if (accurateDetail && !accurateDetail.error) {
+                // Asumsikan accurateDetail.d?.detailSellingPrice?.[0]?.price adalah number
+                const rawPrice = accurateDetail.d?.detailSellingPrice?.[0]?.price || 0;
+
                 const updatedProduct = await prisma.product.update({
                     where: { sku: product.sku },
                     data: {
-                        price_product: formatPrice(accurateDetail.d?.detailSellingPrice?.[0]?.price || 0),
+                        price_product: rawPrice, // Simpan harga sebagai number
                         description: accurateDetail.d?.notes || null,
                         car_brand: accurateDetail.d?.charField1 || null,
                         car_type: accurateDetail.d?.charField2 || null,

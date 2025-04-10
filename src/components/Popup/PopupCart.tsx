@@ -92,7 +92,7 @@ export function PopupCart({ onClose }: PopupCartProps) {
                         className={`fixed inset-0 ${isMobile ? "bg-white" : "bg-black bg-opacity-50 px-20 flex items-center justify-center"} z-50`}
                         onClick={() => setIsOpen(false)}
                   >
-                        <div className="flex w-full gap-2">
+                        <div className={`${isMobile ?'flex w-full gap-2': ''}`}>
                               <div
                                     className={`bg-white rounded-xl w-full max-w-[1440px] ${isMobile ? "h-full" : "max-h-[450px] overflow-y-auto"}`}
                                     onClick={(e) => e.stopPropagation()}

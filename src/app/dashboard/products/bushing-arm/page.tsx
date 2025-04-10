@@ -1,12 +1,13 @@
 'use client'
 
+import { getProductsBushingArmFromSupabase } from "@/actions/supabase/getProductBushingArm";
 import { Breadcrumb } from "@/components/Admin/Breadcrumb/Breadcrumb";
 import { AddProductButton } from "@/components/Admin/Button/AddProductButton";
 import { Table } from "@/components/Admin/Table/Table";
 import { SearchButton } from "@/components/Button/SearchButton";
 import { HeroDropdown } from "@/components/Dropdown/HeroDropdown";
+import { LoadingSkeleton } from "@/components/Skeleton/Loading";
 import { useEffect, useState } from "react";
-import { getProductsFromSupabase } from "@/actions/supabase/getProduct";
 
 export default function BushingArmProducts() {
       const breadcrumbItems = [
@@ -33,19 +34,19 @@ export default function BushingArmProducts() {
             async function fetchProducts() {
                   setLoading(true);
                   try {
-                        const data = await getProductsFromSupabase();
+                        const data = await getProductsBushingArmFromSupabase();
                         if (data && !data.error) {
                               // Format data agar sesuai dengan format tabel
                               const formattedProducts = data.map((product: any, index: number) => ({
                                     no: index + 1,
                                     photo: Array.isArray(product.image_product) && product.image_product.length > 0
-                                    ? product.image_product[0]
-                                    : '/image/product-detail/product-dummy.svg',
+                                          ? product.image_product[0]
+                                          : '/image/product-detail/product-dummy.svg',
                                     sku: product.sku,
                                     productName: product.name_product,
                                     carType: product.car_type || "Tidak Ada Tipe Mobil",
                                     price: `Rp ${product.price_product.toLocaleString()}`,
-                                    action: "Action", // Tambahkan logika action sesuai kebutuhan
+                                    action: "Action",
                               }));
                               setProducts(formattedProducts);
                         } else {
@@ -62,7 +63,9 @@ export default function BushingArmProducts() {
       }, []);
 
       if (loading) {
-            return <p>Loading...</p>;
+            return (
+                  <LoadingSkeleton />
+            )
       }
 
       if (error) {
